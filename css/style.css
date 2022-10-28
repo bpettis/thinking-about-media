@@ -1,0 +1,57 @@
+:root {
+    --text: #fff;
+    --background: #333333;
+    --background-alt: #043027;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    width: 100vw;
+    overflow-x: hidden;
+    margin: auto;
+
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    background-color: var(--background-alt);
+    padding: 2vh 10vw;
+    margin: auto;
+    text-align: center;
+}
+
+section {
+    width: 50vw;
+    margin: auto;
+    padding: 10vh 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer {
+    margin-top: auto;
+    background-color: var(--background-alt);
+    padding: 2vh 10vw;
+    text-align: center;
+}
+
+.spacer {
+    aspect-ratio: 960/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.top {
+    background-image: url('../images/top.svg');
+}
+
+.bottom {
+    background-image: url('../images/bottom.svg');
+}
