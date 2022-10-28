@@ -22,9 +22,13 @@ grammar = tracery.createGrammar({
     abstracts: ["This paper uses #framework# methods to study #object# as an example of #phenomenon# in the #era1# era. In #year#, #celebrity.capitalize# was criticized for making comments about <em>#text#</em> in a widely-read opinion piece in <em>#publication.capitalize#</em>. In response, thousands of #platform# users #negativeResponse.ed#, temporarily causing the website to crash. This paper uses #method# to #studyVerb# this phenomenon and argues that #stakes#."]
 });
 grammar.addModifiers(baseEngModifiers);
-grammar.pushRules("text", [titles[Math.floor(Math.random() * titles.length)]]);
-grammar.pushRules("platform", [platforms[Math.floor(Math.random() * platforms.length)]]);
-var paperTitle = grammar.flatten("#titles#");
-var paperAbstract = grammar.flatten("#abstracts#");
-document.getElementById("title").innerHTML = paperTitle;
-document.getElementById("abstract").innerHTML = paperAbstract;
+generatePaper();
+
+function generatePaper() {
+    grammar.pushRules("text", [titles[Math.floor(Math.random() * titles.length)]]);
+    grammar.pushRules("platform", [platforms[Math.floor(Math.random() * platforms.length)]]);
+    var paperTitle = grammar.flatten("#titles#");
+    var paperAbstract = grammar.flatten("#abstracts#");
+    document.getElementById("title").innerHTML = paperTitle;
+    document.getElementById("abstract").innerHTML = paperAbstract;
+}
