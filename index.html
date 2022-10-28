@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thinking About Media!</title>
+</head>
+<body>
+    <script type="text/javascript" src="js/tracery/tracery.js"></script>
+	<script src="js/vendor/seedrandom.js"></script>
+	<script src="js/tracery/mods-eng-basic.js"></script>
+    <header>
+        <h1>Thinking About Media</h1>
+    </header>
+    <main>
+        <h2 id="title"></h2>
+        <p id="abstract"></p>
+    </main>
+    <footer>
+        <div>Created by Ben Pettis</div>
+        <div>Built using Tracery, a JavaScript library created by Kate Compton</div>
+    </footer>
+    
+    <script type="text/javascript" defer>
+        grammar = tracery.createGrammar({
+            shows: ["The Simpsons", "The Masked Singer", "Bachelor in Paradise", "Love Island", "Big Brother", "Mr. Rogers' Neighborhood", "Thomas the Tank Engine"],
+            phenomenon: ["context collapse", "commodification", "globalization", "neoliberalization", "gamification"],
+            era: ["modern", "postmodern", "premodern", ""],
+            theorist: ["Marx", "Gramsci", "Judith Butler"],
+            framework: ["critical", "feminist", "psychoanalytical"],
+            object: ["<em>#shows#</em>"],
+            titles: ["Revisiting #theorist# in the 21st Century: A #framework# analysis.", "Why study #theorist# anyway?", "#object# as #framework# Praxis: A Model for Using #era# "],
+            abstracts: ["This paper uses #framework# analysis to study #object# as an example of #phenomenon#."]
+        });
+        grammar.addModifiers(baseEngModifiers);
+        var paperTitle = grammar.flatten("#titles#");
+        var paperAbstract = grammar.flatten("#abstracts#");
+        document.getElementById("title").innerHTML = paperTitle;
+        document.getElementById("abstract").innerHTML = paperAbstract;
+
+    </script>
+</body>
+</html>
