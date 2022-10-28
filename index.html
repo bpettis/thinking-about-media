@@ -23,17 +23,23 @@
     </footer>
     
     <script type="text/javascript" defer>
+        const shows = ["The Simpsons", "The Masked Singer", "Bachelor in Paradise", "Love Island", "Big Brother", "Mr. Rogers' Neighborhood", "Thomas the Tank Engine"]
+
+        const randomShow = shows[Math.floor(Math.random() * shows.length)];
+
+
         grammar = tracery.createGrammar({
-            shows: ["The Simpsons", "The Masked Singer", "Bachelor in Paradise", "Love Island", "Big Brother", "Mr. Rogers' Neighborhood", "Thomas the Tank Engine"],
             phenomenon: ["context collapse", "commodification", "globalization", "neoliberalization", "gamification"],
-            era: ["modern", "postmodern", "premodern", ""],
+            era1: ["modern", "postmodern", "premodern",],
+            era2: ["future", "past", "not-so-distant past"],
             theorist: ["Marx", "Gramsci", "Judith Butler"],
             framework: ["critical", "feminist", "psychoanalytical"],
             object: ["<em>#shows#</em>"],
-            titles: ["Revisiting #theorist# in the 21st Century: A #framework# analysis.", "Why study #theorist# anyway?", "#object# as #framework# Praxis: A Model for Using #era# "],
+            titles: ["Revisiting #theorist# in the 21st Century: A #framework# analysis.", "Why study #theorist# anyway?", "#object# as #framework# Praxis: A Model for Using #era1.a# Perspective to Look Toward the #era2#"],
             abstracts: ["This paper uses #framework# analysis to study #object# as an example of #phenomenon#."]
         });
         grammar.addModifiers(baseEngModifiers);
+        grammar.pushRules("shows", [randomShow]);
         var paperTitle = grammar.flatten("#titles#");
         var paperAbstract = grammar.flatten("#abstracts#");
         document.getElementById("title").innerHTML = paperTitle;
