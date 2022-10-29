@@ -4,4 +4,6 @@ FROM httpd:2.4
 # Copy files into the webserver directory
 COPY . /usr/local/apache2/htdocs
 
-EXPOSE $PORT
+# Use the PORT environment variable in Apache configuration files.
+# https://cloud.google.com/run/docs/reference/container-contract#port
+RUN sed -i 's/80/${PORT}/g' /etc/apache2/sites-available/000-default.conf /etc/apache2/ports.conf
