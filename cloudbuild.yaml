@@ -1,0 +1,30 @@
+steps:
+# Build Docker Image
+  - name: gcr.io/cloud-builders/docker
+    id: docker build
+    args:
+      ["build", "-t", "gcr.io/thinking-about-media/thinking-about-media:latest", "."]
+
+# Push Docker Image
+  - name: "gcr.io/cloud-builders/docker"
+    id: docker push
+    args: ["push", "gcr.io/thinking-about-media/thinking-about-media:latest"]
+
+# Deploy New Instance
+  - name: "gcr.io/cloud-builders/gcloud"
+    id: deploy to Cloud Run
+    args:
+      [
+        "run",
+        "deploy",
+        "thinking-about-media",
+        "--image",
+        "gcr.io/thinking-about-media/thinking-about-media:latest",
+        "--region",
+        "us-central1",
+        "--platform",
+        "managed",
+        "--allow-unauthenticated",
+        "--max-instances",
+        "10"
+      ]
