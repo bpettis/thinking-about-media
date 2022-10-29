@@ -29,7 +29,6 @@ a:hover {
 header {
     background-color: var(--background-alt);
     padding: 2vh 10vw;
-    margin: auto;
     text-align: center;
     font-family: depot-new-web, sans-serif;
     font-weight: 300;

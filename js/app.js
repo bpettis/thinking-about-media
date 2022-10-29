@@ -14,7 +14,7 @@ grammar = tracery.createGrammar({
     positiveResponse: ["celebrate", "approve", "agree"],
     theorist: ["Marx", "Gramsci", "Judith Butler"],
     framework: ["critical", "feminist", "psychoanalytical"],
-    method: ["Critical Technocultural Discourse Analysis"],
+    method: ["Critical Technocultural Discourse Analysis", "focus groups", "a series of qualtrics surveys", "ethnography", "autoethnography"],
     studyVerb: ["study", "examine", "critique", "analyze", "interrogate"],
     object: ["<em>#text#</em>", "#platform#"],
     titles: ["Revisiting #theorist# in the 21st Century: A #framework.capitalize# analysis.", "Why study #theorist# anyway?", "#object# as #framework.capitalize# Praxis: A Model for Using #era1.a.capitalize# Perspective to Look Toward the #era2.capitalize#", "\"#oneliner.capitalize#\": A (re)imagination of #object#"],
