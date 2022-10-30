@@ -3,8 +3,23 @@ const platforms = ["Facebook", "MySpace", "Twitter", "Tumblr", "4chan", "Spotify
 
 
 grammar = tracery.createGrammar({
-    oneliner: ["What's the deal with airline food?", "It's the greatest thing since sliced bread", "Kids these days...", "Trust me, bro", "Won't somebody think of the children?"],
-    phenomenon: ["context collapse", "commodification", "globalization", "neoliberalization", "gamification", "climate change", "digital disembedding", "political polarization"],
+    oneliner: [
+        "What's the deal with airline food?",
+        "It's the greatest thing since sliced bread",
+        "Kids these days...",
+        "Trust me, bro",
+        "Won't somebody think of the children?"
+    ],
+    phenomenon: [
+        "context collapse",
+        "commodification",
+        "globalization",
+        "neoliberalization",
+        "gamification",
+        "climate change",
+        "digital disembedding",
+        "political polarization"
+    ],
     concept: ["media literacy", "media production", "media labor", "identity", "gender", "nationality", "media effects research project", "ethics of care"],
     medium: ["television", "social media", "game", "video game", "app"],
     era1: ["modern", "postmodern", "premodern", "contemporary"],
@@ -35,8 +50,11 @@ grammar = tracery.createGrammar({
         "\"#oneliner.capitalize#\": What #celebrity# did for #platform#",
         "Does #theorist# still matter in #year#? Using #method# to re-examine #celebrity#'s #negativeResponse# in <em>#publication#</em>",
         "#object#? More like #era1.capitalize# #publication#! Using #method# to #studyVerb# #phenomenon#",
-        "#oneliner#: A longitudinal effects of #medium# on #phenomenon# from #year1# - #year#",
-        "Is #concept# real? #theorist# #positiveResponse.s# to #era1# #medium#"
+        "\"#oneliner#\": A longitudinal effects of #medium# on #phenomenon# from #year1# - #year#",
+        "Is #concept# real? #theorist# #positiveResponse.s# to #era1# #medium#",
+        "The #era2# of #medium.s#: Envisioning #concept# after #year#",
+        "\"#oneliner#\" #celebrity# said what!?",
+        "Using #theorist# to #studyVerb# the production of #concept# in #medium.s#"
     ],
     stakes: [
         "#object# is representative of the contemporary reality of political polarization",
