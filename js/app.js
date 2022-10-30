@@ -1,5 +1,5 @@
-const titles = ["The Simpsons", "The Masked Singer", "Bachelor in Paradise", "Love Island", "Big Brother", "Mr. Rogers' Neighborhood", "Thomas the Tank Engine", "The Day After", "The Thing", "Shrek 3", "The Bee Movie", "Troll 2", "Mario Kart Double Dash", "3D Space Cadet Pinball", "Microsoft Paint"];
-const platforms = ["Facebook", "MySpace", "Twitter", "Tumblr", "4chan", "Spotify", "Geocities"];
+const titles = ["The Simpsons", "The Masked Singer", "Bachelor in Paradise", "Love Island", "Big Brother", "Mr. Rogers' Neighborhood", "Thomas the Tank Engine", "The Day After", "The Thing", "Shrek 3", "The Bee Movie", "Troll 2", "Mario Kart Double Dash", "3D Space Cadet Pinball", "Microsoft Paint", "Titanic", "The Joy of Painting with Bob Ross", "Star Wars", "Star Trek", "Stranger Things"];
+const platforms = ["Facebook", "MySpace", "Twitter", "Tumblr", "4chan", "Spotify", "Geocities", "Mastodon", "Trump's TRUTH Social Twitter Clone", "LinkedIn", "Club Penguin", "Microsoft Office", "Netflix", "Paramount+"];
 
 
 grammar = tracery.createGrammar({
@@ -36,7 +36,7 @@ grammar = tracery.createGrammar({
         "Does #theorist# still matter in #year#? Using #method# to re-examine #celebrity#'s #negativeResponse# in <em>#publication#</em>",
         "#object#? More like #era1.capitalize# #publication#! Using #method# to #studyVerb# #phenomenon#",
         "#oneliner#: A longitudinal effects of #medium# on #phenomenon# from #year1# - #year#",
-        "Is #concept# real? #theorist# #positiveResponse.s# #era# #medium#"
+        "Is #concept# real? #theorist# #positiveResponse.s# to #era1# #medium#"
     ],
     stakes: [
         "#object# is representative of the contemporary reality of political polarization",
